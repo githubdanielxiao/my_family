@@ -1,0 +1,14 @@
+node_modules/
+.env
+data/
+*.log
+.DS_Store
+build/
+dist/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.firebase/
+.env.local
