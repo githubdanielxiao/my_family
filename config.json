@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configuration": {
+    "app_name": "Family Relationship Management System",
+    "version": "1.0.0",
+    "description": "Manage family relationships with role-based access control",
+    "ports": {
+      "backend": 5000,
+      "frontend": 3000
+    },
+    "database": "SQLite",
+    "authentication": "JWT + Phone-based"
+  },
+  "features": [
+    "Family tree visualization",
+    "Role-based access control",
+    "Member information management",
+    "Permission inheritance",
+    "Force password change on first login"
+  ]
+}
