@@ -1,0 +1,51 @@
+.family-tree {
+  font-size: 14px;
+}
+
+.tree-node {
+  margin-bottom: 8px;
+}
+
+.node-item {
+  display: block;
+  padding: 8px 12px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  user-select: none;
+  border-left: 3px solid transparent;
+}
+
+.node-item:hover {
+  background-color: #e6f7ff;
+  border-left-color: #1890ff;
+}
+
+.node-item.selected {
+  background-color: #e6f7ff;
+  border-left-color: #1890ff;
+  font-weight: 500;
+}
+
+.node-name {
+  color: #333;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.node-children {
+  margin-left: 16px;
+  margin-top: 4px;
+  padding-left: 8px;
+  border-left: 1px solid #d9d9d9;
+}
+
+.no-data {
+  padding: 16px;
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+}
