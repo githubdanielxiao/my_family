@@ -1,0 +1,38 @@
+# 守护进程运行 - Systemd配置
+# 位置: /etc/systemd/system/family-tree.service
+# 使用: systemctl start family-tree
+
+[Unit]
+Description=Family Tree Management System
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/var/www/family-tree
+ExecStart=/usr/bin/node /var/www/family-tree/start.js
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=family-tree
+
+# 环境变量
+Environment="NODE_ENV=production"
+Environment="PORT=5000"
+Environment="DB_PATH=/var/www/family-tree/data/family_tree.sqlite"
+
+# 资源限制
+MemoryLimit=512M
+MemoryAccounting=true
+
+# 权限
+UMask=0027
+PrivateTmp=yes
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+
+[Install]
+WantedBy=multi-user.target
